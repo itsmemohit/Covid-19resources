@@ -1,0 +1,46 @@
+.heading {
+  font-family: "Quicksand", sans-serif;
+  font-size: 32px;
+  margin-top: 140px;
+}
+
+.swipe {
+  display: none;
+}
+.swipeforsm {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.button {
+  margin-left: 20px;
+  margin-top: 24px;
+  margin-bottom: 10px;
+}
+
+@media only screen and (max-width: 768px) {
+  .swipe {
+    display: block;
+    text-align: right;
+    padding: 5px;
+    font-size: 12px;
+    opacity: 0.6;
+    font-weight: 500;
+  }
+  .swipeforsm {
+    flex-direction: row;
+    flex-wrap: nowrap;
+    overflow-x: scroll;
+  }
+  .disclaimer {
+    align-items: center;
+    width: 95%;
+    margin-left: 8px;
+  }
+}
+
+.disclaimer {
+  margin-top: 20px;
+  font-size: 17px;
+
+}
