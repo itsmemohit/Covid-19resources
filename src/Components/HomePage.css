@@ -18,6 +18,18 @@
   margin-bottom: 10px;
 }
 
+.disclaimer {
+  margin-top: 20px;
+  font-size: 17px;
+
+}
+
+.Collapsedboxes{
+  border:1px solid #000;
+  border-radius:5px;
+  padding:1px;
+}
+
 @media only screen and (max-width: 768px) {
   .swipe {
     display: block;
