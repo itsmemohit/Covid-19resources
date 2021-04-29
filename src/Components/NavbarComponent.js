@@ -39,13 +39,13 @@ const NavbarComponent = (props) => {
                 Volunteer
               </DropdownToggle>
               <DropdownMenu right>
-                <DropdownItem>
+                <DropdownItem href="https://forms.gle/jLBperRCcYqUBXsn8" target="_blank" rel="noopener noreferrer">
                   Doctor Volunteer Form
                 </DropdownItem>
-                <DropdownItem>
+                <DropdownItem href="https://forms.gle/sEp6x24eYT9eUbtb9" target="_blank" rel="noopener noreferrer">
                   Covid19 Service Form
                 </DropdownItem>
-                <DropdownItem>
+                <DropdownItem href="https://forms.gle/D6fzVbJww7qan4zu9" target="_blank" rel="noopener noreferrer">
                   Volunteer Registration
                 </DropdownItem>
               </DropdownMenu>

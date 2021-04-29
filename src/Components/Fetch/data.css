@@ -1,0 +1,11 @@
+tr {
+    border: none;
+    vertical-align: inherit;
+    background: #eee;
+    border: 1px solid #ccc;
+    padding: 10px;
+}
+
+.tabledata {
+    font-size: 14px;
+}

@@ -1,0 +1,14 @@
+@media only screen and (max-width: 768px) {
+    .loadingg{
+        max-width: 100%;
+    height: auto;
+    display: table;
+    margin: 0 auto;
+    }
+}
+
+.loadingg{
+    margin-top: 30px;
+    margin-bottom: 30px;
+}
+

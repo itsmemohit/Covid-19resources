@@ -1,15 +1,16 @@
 import React from 'react';
 import animationlogo from '../Images/Doctorsymbol.gif';
-import Spinner from 'react-bootstrap/Spinner'
+// import Spinner from 'react-bootstrap/Spinner'
+import './LoadingComponent.css';
 
 export const LoadingComponent = () => {
     return (
-        <div className="col-12">
-            <img src={animationlogo} alt="loading..." />
-            <p>Loading...</p>
-            <Spinner animation="border" role="status">
+        <div className="col-12 loader">
+            <img src={animationlogo} className="loadingg offset-md-6 " alt="loading..." />
+            
+            {/* <Spinner animation="border" role="status">
                 <span className="sr-only">Loading...</span>
-            </Spinner>
+            </Spinner> */}
         </div>
     );
 };
