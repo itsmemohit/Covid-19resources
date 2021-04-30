@@ -1,8 +1,6 @@
 import firebase from 'firebase';
 import 'firebase/firestore';
 
-
-
 var firebaseConfig = {
     apiKey: "AIzaSyAm1Bb0I_3mZPOpYHRAaQ9T_OldcJgks0k",
     authDomain: "covid19-resources.firebaseapp.com",
@@ -15,4 +13,4 @@ var firebaseConfig = {
 
 firebase.initializeApp(firebaseConfig);
 
-firebase.analytics();
+firebase.analytics(firebaseConfig);

@@ -2,13 +2,16 @@ import React, { useEffect, useState, Fragment } from "react";
 import Tabletop from "tabletop";
 import { Table } from 'reactstrap';
 import './data.css';
+import ReactGa from 'react-ga';
 
 const FetchMeal = () => {
     const [data, setData] = useState([]);
 
     useEffect(() => {
+        ReactGa.initialize('G-121EBY7E67');
+        ReactGa.pageview('/meal')
         Tabletop.init({
-            key: "1YvMMcBJhIUmcwDVJyQjcRETIh6lz3VwyBjnaylYL52k",
+            key: "1Myio1wEtkOZGpNZMQicWFQ0w9uzMOhhPieBh_MfsmtE",
             simpleSheet: true
         })
             .then((data) => setData(data))
@@ -35,7 +38,7 @@ const FetchMeal = () => {
                             </tr>
                             <tr>
                                 <th scope="row">Contact Number</th>
-                                <td><a href="tel:{item.Number}">{item.Number}</a></td>
+                                <td style={{color:"blue"}}>{item.Number}</td>
                                 
                             </tr>
 

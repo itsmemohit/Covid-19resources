@@ -2,11 +2,14 @@ import React, { useEffect, useState, Fragment } from "react";
 import Tabletop from "tabletop";
 import { Table } from 'reactstrap';
 import './data.css';
+import ReactGa from 'react-ga';
 
-const FetchOxygen = ( ) => {
+const FetchOxygen = () => {
     const [data, setData] = useState([]);
 
     useEffect(() => {
+        ReactGa.initialize('G-121EBY7E67');
+        ReactGa.pageview('/Oxygen')
         Tabletop.init({
             key: "1AUuuoNUQgSkUCtxcxRUL481kczF7AjTJBLVNS6hV-as",
             simpleSheet: true
@@ -18,9 +21,9 @@ const FetchOxygen = ( ) => {
     return (
         <>
             {data.map((item, i) => (
-                    <Fragment key={i}>
-            <Table bordered className="tabledata">
-                
+                <Fragment key={i}>
+                    <Table bordered className="tabledata">
+
                         <thead>
                             <tr>
                                 <th>Name of Service</th>
@@ -29,8 +32,8 @@ const FetchOxygen = ( ) => {
                         </thead>
                         <tbody>
                             <tr>
-                                <th scope="row">Contact</th>
-                                <td datatype="number">{item.Contact}</td>
+                                <th scope="row">Contact Number</th>
+                                <td style={{color:"blue"}}>{item.Number}</td>
 
                             </tr>
                             <tr>
@@ -48,11 +51,11 @@ const FetchOxygen = ( ) => {
                                 <td>{item.LastVerified}</td>
 
                             </tr>
-                            
+
                         </tbody>
-            </Table>
-            
-            </Fragment>
+                    </Table>
+
+                </Fragment>
             ))}
         </>
     );

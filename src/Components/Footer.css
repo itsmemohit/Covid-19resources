@@ -6,6 +6,12 @@
 
 .Brand{
     color: #fff;
-    text-align: center;
-    align-items: center;
+    
+
+}
+
+.Brand1{
+    color: #fff;
+    /* text-align: left; */
+    align-items: left;
 }

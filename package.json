@@ -15,10 +15,12 @@
     "react-animation-components": "^3.0.0",
     "react-bootstrap": "^1.5.2",
     "react-dom": "^17.0.2",
+    "react-ga": "^3.3.0",
     "react-popper": "^2.2.5",
     "react-redux": "^7.2.4",
     "react-scripts": "4.0.3",
     "reactstrap": "^8.9.0",
+    "serviceworker": "^0.1.7",
     "tabletop": "^1.6.3",
     "web-vitals": "^1.0.1",
     "yarn": "^1.22.10"

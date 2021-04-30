@@ -2,11 +2,14 @@ import React, { useEffect, useState, Fragment } from "react";
 import Tabletop from "tabletop";
 import { Table } from 'reactstrap';
 import './data.css';
+import ReactGa from 'react-ga';
 
 const FetchAmbulance = () => {
     const [data, setData] = useState([]);
 
     useEffect(() => {
+        ReactGa.initialize('G-121EBY7E67');
+        ReactGa.pageview('/ambulance')
         Tabletop.init({
             key: "1VjtZ7k5isT5w-bsmyrx7-Of2c3QTR8u_Cj7FY7BCmbM",
             simpleSheet: true
@@ -14,10 +17,11 @@ const FetchAmbulance = () => {
             .then((data) => setData(data))
             .catch((err) => console.warn(err));
     }, []);
-
+    let a = "8745869599";
     return (
         <>
             {data.map((item, i) => (
+
                 <Fragment key={i}>
                     <Table bordered className="tabledata">
 
@@ -35,8 +39,9 @@ const FetchAmbulance = () => {
                             </tr>
                             <tr>
                                 <th scope="row">Contact Number</th>
-                                <td><a href="tel:{item.Number}">{item.Number}</a></td>
-                                
+
+                                <td style={{ color: "blue" }}>{item.Number}</td>
+
                             </tr>
 
                             <tr>

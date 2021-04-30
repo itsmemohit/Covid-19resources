@@ -2,11 +2,14 @@ import React, { useEffect, useState, Fragment } from "react";
 import Tabletop from "tabletop";
 import { Table } from 'reactstrap';
 import './data.css';
+import ReactGa from 'react-ga';
 
 const Data = () => {
     const [data, setData] = useState([]);
 
     useEffect(() => {
+        ReactGa.initialize('G-121EBY7E67');
+        ReactGa.pageview('/data')
         Tabletop.init({
             key: "1_2kyqoKPI2gD4dk0HeeJ0tssoDYrUAcZxN9EnLrTzw0",
             simpleSheet: true
@@ -30,7 +33,7 @@ const Data = () => {
                         <tbody>
                             <tr>
                                 <th scope="row">Contact</th>
-                                <td datatype="number">{item.Number}</td>
+                                <td style={{color:"blue"}}>{item.Number}</td>
 
                             </tr>
                             <tr>

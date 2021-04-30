@@ -2,11 +2,14 @@ import React, { useEffect, useState, Fragment } from "react";
 import Tabletop from "tabletop";
 import { Table } from 'reactstrap';
 import './data.css';
+import ReactGa from 'react-ga';
 
 const FetchPlasma = () => {
     const [data, setData] = useState([]);
 
     useEffect(() => {
+        ReactGa.initialize('G-121EBY7E67');
+        ReactGa.pageview('/plasma')
         Tabletop.init({
             key: "1lfWanb_SeTbBzDs3k2nkK2HHJXTukChNSWZ4ATlsAOY",
             simpleSheet: true
@@ -35,13 +38,13 @@ const FetchPlasma = () => {
                             </tr>
                             <tr>
                                 <th scope="row">Contact Number</th>
-                                <td><a href="tel:{item.Number}">{item.Number}</a></td>
+                                <td style={{color:"blue"}}>{item.Number}</td>
                                 
                             </tr>
 
                             <tr>
                                 <th scope="row">Blood Type</th>
-                                <td><a href={item.BloodType}>{item.Website}</a></td>
+                                <td>{item.BloodType}</td>
 
                             </tr>
                             <tr>

@@ -2,11 +2,14 @@ import React, { useEffect, useState, Fragment } from "react";
 import Tabletop from "tabletop";
 import { Table } from 'reactstrap';
 import './data.css';
+import ReactGa from 'react-ga';
 
 const FetchRemdisivir = ( ) => {
     const [data, setData] = useState([]);
 
     useEffect(() => {
+        ReactGa.initialize('G-121EBY7E67');
+        ReactGa.pageview('/remdisvir');
         Tabletop.init({
             key: "1AUuuoNUQgSkUCtxcxRUL481kczF7AjTJBLVNS6hV-as",
             simpleSheet: true

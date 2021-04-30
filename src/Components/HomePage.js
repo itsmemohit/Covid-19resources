@@ -9,10 +9,10 @@ import MentalServiceData from '././Fetch/FetchMentalService';
 import FetchAmbulance from '././Fetch/FetchAmbulance';
 import FetchPlasma from '././Fetch/FetchPlasma';
 import FetchBlood from '././Fetch/FetchBlood';
-import FetchMeal from '././Fetch/FetchMeal';
+import FetchMeal from './Fetch/FetchMeal';
 import FetchSanitization from './Fetch/FetchSanitization';
 import FetchHomecare from './Fetch/FetchHomecare';
-
+import ReactGa from 'react-ga';
 // componentDidMount() {
 //     this.setState({profileExist: false})
 // setTimeout(() => { 
@@ -40,6 +40,8 @@ const HomePage = () => {
 
     // },10000));
     const onClick = () => {
+        ReactGa.initialize('G-121EBY7E67');
+        ReactGa.pageview('/oxygen');
         setOpen(!boxOpen);
         setOpenrem(false);
         setOpenamb(false);
@@ -53,6 +55,8 @@ const HomePage = () => {
         setOpenhom(false);
     }
     const onClickrem = () => {
+        ReactGa.initialize('G-121EBY7E67');
+        ReactGa.pageview('/remdisvir');
         setOpenrem(!boxOpenrem);
         setOpen(false);
         setOpenamb(false);
@@ -66,6 +70,8 @@ const HomePage = () => {
         setOpenhom(false);
     }
     const onClickamb = () => {
+        ReactGa.initialize('G-121EBY7E67');
+        ReactGa.pageview('/ambulance');
         setOpenamb(!boxOpenamb);
         setOpen(false);
         setOpenrem(false);
@@ -79,6 +85,8 @@ const HomePage = () => {
         setOpenhom(false);
     }
     const onClickpla = () => {
+        ReactGa.initialize('G-121EBY7E67');
+        ReactGa.pageview('/plasma');
         setOpenpla(!boxOpenpla);
         setOpen(false);
         setOpenrem(false);
@@ -92,6 +100,8 @@ const HomePage = () => {
         setOpenhom(false);
     }
     const onClickblo = () => {
+        ReactGa.initialize('G-121EBY7E67');
+        ReactGa.pageview('/blood');
         setOpenblo(!boxOpenblo);
         setOpen(false);
         setOpenrem(false);
@@ -105,6 +115,8 @@ const HomePage = () => {
         setOpenhom(false);
     }
     const onClickmea = () => {
+        ReactGa.initialize('G-121EBY7E67');
+        ReactGa.pageview('/meal');
         setOpenmea(!boxOpenmea);
         setOpen(false);
         setOpenrem(false);
@@ -144,6 +156,8 @@ const HomePage = () => {
     //     setOpenhom(false);
     // }
     const onClicksan = () => {
+        ReactGa.initialize('G-121EBY7E67');
+        ReactGa.pageview('/sanitisation');
         setOpensan(!boxOpensan);
         setOpen(false);
         setOpenrem(false);
@@ -157,6 +171,8 @@ const HomePage = () => {
         setOpenhom(false);
     }
     const onClickmen = () => {
+        ReactGa.initialize('G-121EBY7E67');
+        ReactGa.pageview('/mentalhealth');
         setOpenmen(!boxOpenmen);
         setOpen(false);
         setOpenrem(false);
@@ -170,6 +186,8 @@ const HomePage = () => {
         setOpenhom(false);
     }
     const onClickhom = () => {
+        ReactGa.initialize('G-121EBY7E67');
+        ReactGa.pageview('/homecare');
         setOpenhom(!boxOpenhom);
         setOpen(false);
         setOpenrem(false);
@@ -190,7 +208,7 @@ const HomePage = () => {
                 <h4 className="heading"><strong><img src={covidlogo} alt="covid logo" /> Covid-19 Resources</strong></h4>
             </header>
             <div className="swipeforsm">
-                <Button className="button" outline color="info" size="lg" onClick={onClick}>Oxygen</Button>{' '}
+                <Button className="button" outline color="info" size="lg" onClick={onClick}>Oxygen/Oxygen Beds/ICU Beds</Button>{' '}
                 <Button className="button" outline color="info" size="lg" onClick={onClickrem} >Remdesivir/Tocilizumab</Button>{' '}
                 <Button className="button" outline color="info" size="lg" onClick={onClickamb}>Ambulance</Button>{' '}
                 <Button className="button" outline color="info" size="lg" onClick={onClickpla}>Plasma</Button>{' '}

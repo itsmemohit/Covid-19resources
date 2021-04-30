@@ -2,11 +2,14 @@ import React, { useEffect, useState, Fragment } from "react";
 import Tabletop from "tabletop";
 import { Table } from 'reactstrap';
 import './data.css';
+import ReactGa from 'react-ga';
 
 const MentalServiceData = () => {
     const [data, setData] = useState([]);
 
     useEffect(() => {
+        ReactGa.initialize('G-121EBY7E67');
+        ReactGa.pageview('/mentalservice')
         Tabletop.init({
             key: "1z8kK-EYXCPfpg9q1G8lO3O4A8Tea8raIpB8HiOW06p4",
             simpleSheet: true
