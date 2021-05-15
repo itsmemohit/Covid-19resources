@@ -1,16 +1,17 @@
 {
   "short_name": "Covid Resources App",
-  "name": "Production",
+  "name": "Covid Resources App",
   "icons": [
     {
       "src": "officer.png",
-      "sizes": "64x64 32x32 24x24 16x16",
+      "sizes": "64x64 36*36 48*48 32x32 24x24 16x16",
       "type": "image/x-icon"
     },
     {
       "src": "officer.png",
       "type": "image/png",
-      "sizes": "192x192"
+      "sizes": "192x192",
+      "purpose": "any maskable"
     },
     {
       "src": "officer.png",
@@ -18,7 +19,7 @@
       "sizes": "512x512"
     }
   ],
-  "start_url": ".",
+  "start_url": "https://covidresources.tech/",
   "display": "standalone",
   "theme_color": "#000000",
   "background_color": "#ffffff"
