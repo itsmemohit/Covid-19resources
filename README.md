@@ -1,3 +1,19 @@
+
+#Links to Visit
+https://covid19-resources.firebaseapp.com/
+
+https://www.covidresources.tech/
+
+#Preview
+![Screenshot (222)](https://user-images.githubusercontent.com/46155954/125810667-a5368efe-7007-4be3-af20-5ca2828ae9aa.png)
+
+This is the homepage
+
+
+
+![Screenshot (222)_LI](https://user-images.githubusercontent.com/46155954/125822060-82a21eef-83eb-4702-94bd-db01176a351a.jpg)
+the option to download it like a app is underlined by blue.
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
