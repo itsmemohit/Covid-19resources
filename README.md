@@ -8,6 +8,15 @@
 ![Screenshot (222)](https://user-images.githubusercontent.com/46155954/125810667-a5368efe-7007-4be3-af20-5ca2828ae9aa.png)
 
 This is the homepage.
+
+![Screenshot (295)](https://user-images.githubusercontent.com/46155954/125824504-98c033b5-08b7-4c23-925b-9c51a6c671ee.png)
+
+This is the options that comes when youclick on install icon.
+
+# Preview in desktop as a Progressive Web App.
+
+![Screenshot (296)](https://user-images.githubusercontent.com/46155954/125824691-2d5f8e03-aa0d-470e-bcac-0aea0e09ea17.png)
+
 --------------------------------------------------------------------------------
 ![Screenshot (222)_LI](https://user-images.githubusercontent.com/46155954/125822060-82a21eef-83eb-4702-94bd-db01176a351a.jpg)
 
