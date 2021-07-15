@@ -17,7 +17,7 @@ The option to download it like a app is underlined by blue.
 
 This is the options that comes when you click on install icon.
 ---
-# Preview in desktop as a Progressive Web App.
+# Preview in desktop as a Progressive Web App.(After Installing)
 
 ![Screenshot (296)](https://user-images.githubusercontent.com/46155954/125824691-2d5f8e03-aa0d-470e-bcac-0aea0e09ea17.png)
 --------------------------------------------------------------------------------
