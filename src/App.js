@@ -1,13 +1,20 @@
+import React from 'react';
 import NavbarComponent from './Components/NavbarComponent';
-import './App.css';
-import HomePage from './Components/HomePage';
 import Footer from './Components/Footer';
-import { useEffect } from 'react';
 import ReactGa from 'react-ga';
+import firebase from './firebase';
+import Home from './Components/Home'
+
 
 function App() {
-  
-  useEffect(() => {
+
+  React.useEffect(() => {
+    const msg = firebase.messaging();
+    Notification.requestPermission().then(() => {
+      return msg.getToken();
+    }).then((data) => {
+      console.warn("token: ", data);
+    })
     ReactGa.initialize('G-121EBY7E67');
     ReactGa.pageview('/home')
   }, [])
@@ -15,8 +22,8 @@ function App() {
   return (
     <div className="App">
       <NavbarComponent />
-      <HomePage />   
-      <Footer />   
+      <Home />
+      <Footer />
     </div>
   );
 }

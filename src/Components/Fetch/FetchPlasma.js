@@ -1,23 +1,10 @@
-import React, { useEffect, useState, Fragment } from "react";
-import Tabletop from "tabletop";
+import React, { Fragment } from "react";
 import { Table } from 'reactstrap';
 import './data.css';
-import ReactGa from 'react-ga';
 
-const FetchPlasma = () => {
-    const [data, setData] = useState([]);
+const FetchPlasma = ({ data }) => {
 
-    useEffect(() => {
-        ReactGa.initialize('G-121EBY7E67');
-        ReactGa.pageview('/plasma')
-        Tabletop.init({
-            key: "1lfWanb_SeTbBzDs3k2nkK2HHJXTukChNSWZ4ATlsAOY",
-            simpleSheet: true
-        })
-            .then((data) => setData(data))
-            .catch((err) => console.warn(err));
-    }, []);
-
+    console.log("plams", data);
     return (
         <>
             {data.map((item, i) => (
@@ -38,8 +25,8 @@ const FetchPlasma = () => {
                             </tr>
                             <tr>
                                 <th scope="row">Contact Number</th>
-                                <td style={{color:"blue"}}>{item.Number}</td>
-                                
+                                <td style={{ color: "blue" }}>{item.Number}</td>
+
                             </tr>
 
                             <tr>
@@ -72,4 +59,4 @@ const FetchPlasma = () => {
     );
 }
 
-export default FetchPlasma;
+export default React.memo(FetchPlasma);

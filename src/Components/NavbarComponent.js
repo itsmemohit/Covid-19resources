@@ -23,7 +23,7 @@ const NavbarComponent = (props) => {
   return (
     <div>
       <Navbar dark expand="md" fixed="top" className="NavbarCustom">
-      <img height="40px" width="40px" src={logo} className="App-logo" alt="logo" />
+        <img height="40px" width="40px" src={logo} className="App-logo" alt="logo" />
         <NavbarBrand href="/" >&nbsp;&nbsp;Covid Resources</NavbarBrand>
         <NavbarToggler onClick={toggle} />
         <Collapse isOpen={isOpen} navbar>
@@ -31,9 +31,6 @@ const NavbarComponent = (props) => {
             <NavItem>
               <NavLink href="/components/"></NavLink>
             </NavItem>
-            {/* <NavItem>
-              <NavLink href="https://github.com/reactstrap/reactstrap">GitHub</NavLink>
-            </NavItem> */}
             <UncontrolledDropdown nav inNavbar>
               <DropdownToggle nav caret>
                 Volunteer
@@ -51,11 +48,11 @@ const NavbarComponent = (props) => {
               </DropdownMenu>
             </UncontrolledDropdown>
           </Nav>
-          
+
         </Collapse>
       </Navbar>
     </div>
   );
 }
 
-export default NavbarComponent;
+export default React.memo(NavbarComponent);

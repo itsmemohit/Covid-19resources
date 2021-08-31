@@ -1,22 +1,9 @@
 import React, { useEffect, useState, Fragment } from "react";
-import Tabletop from "tabletop";
+import Papa from "papaparse";
 import { Table } from 'reactstrap';
 import './data.css';
-import ReactGa from 'react-ga';
 
-const FetchBlood = () => {
-    const [data, setData] = useState([]);
-
-    useEffect(() => {
-        ReactGa.initialize('G-121EBY7E67');
-        ReactGa.pageview('/Blood')
-        Tabletop.init({
-            key: "1uaK5oylKaC2NGSGVy9xszYwGD4ykAoGdjTNrDbJOmHY",
-            simpleSheet: true
-        })
-            .then((data) => setData(data))
-            .catch((err) => console.warn(err));
-    }, []);
+const FetchBlood = ({ data }) => {
 
     return (
         <>
@@ -38,8 +25,8 @@ const FetchBlood = () => {
                             </tr>
                             <tr>
                                 <th scope="row">Contact Number</th>
-                                <td style={{color:"blue"}}>{item.Number}</td>
-                                
+                                <td style={{ color: "blue" }}>{item.Number}</td>
+
                             </tr>
 
                             <tr>
@@ -52,7 +39,7 @@ const FetchBlood = () => {
                                 <td>{item.Area}</td>
 
                             </tr>
-                            
+
                             <tr>
                                 <th scope="row">Verified At</th>
                                 <td datatype="number">{item.VerifiedAt}</td>
@@ -68,4 +55,4 @@ const FetchBlood = () => {
     );
 }
 
-export default FetchBlood;
+export default React.memo(FetchBlood);

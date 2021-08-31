@@ -1,23 +1,11 @@
-import React, { useEffect, useState, Fragment } from "react";
-import Tabletop from "tabletop";
+import React, { Fragment } from "react";
+import Papa from "papaparse";
 import { Table } from 'reactstrap';
 import './data.css';
-import ReactGa from 'react-ga';
 
-const FetchMeal = () => {
-    const [data, setData] = useState([]);
+const FetchMeal = ({ data }) => {
 
-    useEffect(() => {
-        ReactGa.initialize('G-121EBY7E67');
-        ReactGa.pageview('/meal')
-        Tabletop.init({
-            key: "1Myio1wEtkOZGpNZMQicWFQ0w9uzMOhhPieBh_MfsmtE",
-            simpleSheet: true
-        })
-            .then((data) => setData(data))
-            .catch((err) => console.warn(err));
-    }, []);
-
+    console.log("meal", data);
     return (
         <>
             {data.map((item, i) => (
@@ -38,8 +26,8 @@ const FetchMeal = () => {
                             </tr>
                             <tr>
                                 <th scope="row">Contact Number</th>
-                                <td style={{color:"blue"}}>{item.Number}</td>
-                                
+                                <td style={{ color: "blue" }}>{item.Number}</td>
+
                             </tr>
 
                             <tr>
@@ -52,7 +40,7 @@ const FetchMeal = () => {
                                 <td>{item.Area}</td>
 
                             </tr>
-                            
+
                             <tr>
                                 <th scope="row">Verified At</th>
                                 <td datatype="number">{item.VerifiedAt}</td>
@@ -68,4 +56,4 @@ const FetchMeal = () => {
     );
 }
 
-export default FetchMeal;
+export default React.memo(FetchMeal);
