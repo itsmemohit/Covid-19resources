@@ -1,17 +1,23 @@
 .footer-copyright {
-    background-color: #17A2B8;
-    color: #fff
-    
+  background-color: #17a2b8;
+  color: #fff;
+  position: static;
 }
 
-.Brand{
-    color: #fff;
-    
-
+.Brand {
+  color: #fff;
 }
 
-.Brand1{
-    color: #fff;
-    /* text-align: left; */
-    align-items: left;
+.Brand1 {
+  color: #fff;
+  align-items: left;
+}
+
+@media only screen and (min-width: 768px) {
+  .footer-copyright {
+    position: static;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+  }
 }

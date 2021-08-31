@@ -32,21 +32,18 @@ const FooterPage = () => {
                         <h5 className="title ">&nbsp;&nbsp;&nbsp;&nbsp;Follow Us</h5>
                         <ul>
                             <li className="list-unstyled ">
-                                <a className="Brand" style={{textAlign:"right"}} md="3" href="https://www.instagram.com/covidresources.tech" target="_blank" rel="noopener noreferrer">Instagram </a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                                <a className="Brand" style={{ textAlign: "right" }} md="3" href="https://www.instagram.com/covidresources.tech" target="_blank" rel="noopener noreferrer">Instagram </a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                             </li>
                             <li className="list-unstyled">
                                 <a className="Brand" href="https://www.instagram.com/mohit_0404/" target="_blank" rel="noopener noreferrer">Instagram - Creator </a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                             </li>
-                            {/* <li className="list-unstyled">
-                <a className="Brand" href="https://forms.gle/D6fzVbJww7qan4zu9" target="_blank" rel="noopener noreferrer">Volunteer Registration</a>
-              </li> */}
                         </ul>
                     </MDBCol>
                 </MDBRow>
             </MDBContainer>
             <div className=" text-center py-3">
                 <MDBContainer fluid>
-                    Made by <a className="Brand" href="https://www.linkedin.com/in/mohit-dangwal-a17909171/"> Mohit </a>
+                    Made by <a className="Brand" href="https://www.linkedin.com/in/mohit-dangwal-a17909171/" style={{ color: "#072F5F" }}> Mohit </a>
                 </MDBContainer>
             </div>
         </MDBFooter>

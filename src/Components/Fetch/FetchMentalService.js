@@ -1,22 +1,9 @@
-import React, { useEffect, useState, Fragment } from "react";
-import Tabletop from "tabletop";
+import React, { Fragment } from "react";
+import Papa from 'papaparse';
 import { Table } from 'reactstrap';
 import './data.css';
-import ReactGa from 'react-ga';
 
-const MentalServiceData = () => {
-    const [data, setData] = useState([]);
-
-    useEffect(() => {
-        ReactGa.initialize('G-121EBY7E67');
-        ReactGa.pageview('/mentalservice')
-        Tabletop.init({
-            key: "1z8kK-EYXCPfpg9q1G8lO3O4A8Tea8raIpB8HiOW06p4",
-            simpleSheet: true
-        })
-            .then((data) => setData(data))
-            .catch((err) => console.warn(err));
-    }, []);
+const MentalServiceData = ({ data }) => {
 
     return (
         <>
@@ -67,5 +54,5 @@ const MentalServiceData = () => {
         </>
     );
 }
-
-export default MentalServiceData;
+<script src='https://cdnjs.cloudflare.com/ajax/libs/tabletop.js/1.5.1/tabletop.min.js'></script>
+export default React.memo(MentalServiceData);
